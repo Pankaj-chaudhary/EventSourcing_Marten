@@ -1,0 +1,37 @@
+@Api_HostAddress = https://localhost:7041
+
+PUT {{Api_HostAddress}}/CarMaintenance
+
+###
+
+DELETE {{Api_HostAddress}}/CarMaintenance
+
+###
+
+GET {{Api_HostAddress}}/CarMaintenance/{carId}
+
+###
+
+POST {{Api_HostAddress}}/Create
+
+###
+
+GET {{Api_HostAddress}}/CurrentPosition/{carId}
+
+###
+
+GET {{Api_HostAddress}}/LiveAggregation/{carId}
+
+###
+
+GET {{Api_HostAddress}}/Get/{carId}
+
+###
+
+PUT {{Api_HostAddress}}/Update/{carId}
+
+###
+
+PUT {{Api_HostAddress}}/UpdateLocation/{carId}
+
+###
