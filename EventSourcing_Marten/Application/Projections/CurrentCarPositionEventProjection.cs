@@ -21,6 +21,10 @@ namespace Application.Projections
 
         public CurrentCarPosition Create(UpdateLocationRequest lastLocation, IEvent e)
         {
+            if(lastLocation.Longitude == 10)
+            {
+                throw new Exception("Intentional exception to test async");
+            }
             return new CurrentCarPosition(e.Id, new Location(lastLocation.Longitude, lastLocation.Latitute));
         }
     }

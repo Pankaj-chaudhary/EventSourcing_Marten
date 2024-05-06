@@ -14,6 +14,10 @@ namespace Application.Projections
     {
         public async Task Project(CarMaintenanceEvent evt, IDocumentOperations ops)
         {
+            if(evt.Name == "error")
+            {
+                throw new Exception("Intentional exception to test inline rollback");
+            }
             var doc = await ops.LoadAsync<CarMaintenaceEntity>(evt.CarId);
             doc ??= new()
             {
